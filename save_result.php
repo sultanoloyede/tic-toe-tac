@@ -11,6 +11,8 @@ if (!isset($pdo)) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $_POST['result'];
 
+    echo 'Received result: ' . $result . '<br>';
+
     if (!in_array($result, ['X', 'O', 'Draw'])) {
         echo 'Invalid result';
         exit;
